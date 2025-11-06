@@ -1,0 +1,72 @@
+:root{
+    --main-font: "IBMPlexMono-Regular", Arial, sans-serif;
+    --accent-font: "IBMPlexMono-Bold", Arial, monospace;
+    --bg-color: #000028;
+    --text-color: #F1B2CE;
+    --accent-color: #000028;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+.page{
+    min-inline-size: 360px;
+    margin: 0;
+    padding: 0 5vi;
+    color: var(--text-color);
+    font-family: var(--main-font);
+    background-color: var(--bg-color);
+}
+
+p,
+h1,
+h2,
+h3,
+blockquote,
+ul,
+ol,
+li,
+figure{
+    margin: 0;
+}
+
+.heading{
+    --text-color: #FF0070;
+    font-family: var(--accent-font);
+    color: var(--text-color);
+    line-height: 0.9;
+    text-align:start;
+}
+
+.header{
+    background-image: url('/images/1024x768-dark.png');
+}
+
+.header-title{
+    --text-color: #DB00FF;
+    color: var(--text-color);
+    margin-block-start: 10%;
+    margin-block-end: 50px;
+    font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
+    text-shadow: 5px 5px 0px #FF0070;
+}
+
+.content-title{
+    font-size: 18px;
+}
+
+.content-subtitle{
+    --text-color: #000028;
+    --bg-color: #FF0070;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    font-size: 18px;
+}
+
+.subtitle-strong{
+    font-family: var(--accent-font);
+    font-size: 18px;
+}
