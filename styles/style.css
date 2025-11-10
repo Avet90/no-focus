@@ -15,7 +15,6 @@
 .page{
     min-inline-size: 360px;
     margin: 0;
-    padding: 0 5vi;
     color: var(--text-color);
     font-family: var(--main-font);
     background-color: var(--bg-color);
@@ -43,6 +42,7 @@ figure{
 
 .header{
     background-image: url('/images/1024x768-dark.png');
+    display: grid;
 }
 
 .header-title{
@@ -52,6 +52,56 @@ figure{
     margin-block-end: 50px;
     font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
     text-shadow: 5px 5px 0px #FF0070;
+}
+
+.header-menu{
+    justify-self:end;
+}
+
+.header-theme-toggler{
+    list-style: none;
+}
+
+.header-theme-button{
+    --text-color: #FF0070;
+    color: var(--text-color);
+    background: transparent;
+    border: none;
+    padding: 0 10px;
+    margin: 0;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.header-theme-button:focus {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.header-theme-button:hover {
+    border: 1px solid #F1B2CE;
+}
+
+.header-theme-button::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    left: 50%;
+    background-color: currentColor;
+    transform: translateX(-50%);
+}
+
+.header-theme-button:hover::after{
+    width: 100%;
+}
+
+.content-section{
+    padding: 0 5vi;
 }
 
 .content-title{
