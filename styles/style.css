@@ -43,6 +43,78 @@ figure{
 .header{
     background-image: url('/images/1024x768-dark.png');
     display: grid;
+    position: relative;
+    padding-top: 3vi;
+}
+
+.header::before {
+    --text-color: #FF0070;
+    color: var(--text-color);
+    content: '';
+    position: absolute;
+    top: 3vi;
+    right: 3vi;
+    width: 25px;
+    height: 25px;
+    border-top: 1px solid currentColor;
+    border-right: 1px solid currentColor;
+}
+
+
+.header::after {
+    --text-color: #FF0070;
+    color: var(--text-color);
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 3vi;
+    width: 25px;
+    height: 25px;
+    border-bottom: 1px solid currentColor;
+    border-left: 1px solid currentColor;
+}
+
+.header-top-corner{
+    --text-color: #FF0070;
+    color: var(--text-color);
+    position: relative;
+    width: 25px;
+    height: 25px;
+    justify-self:end;   
+}
+
+.header-top-corner::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    border-top: 1px solid currentColor;
+    border-right: 1px solid currentColor;
+}
+
+
+.header-rec{
+    --text-color: #FF0070;
+    color: var(--text-color);
+    position: relative;
+    padding-right: 36px;
+    justify-self:end;
+}
+.header-rec::after {
+    content: '';
+    position: absolute;
+right: 13%;
+    top: 40%;
+    width: 10px;
+    height: 10px;
+    background-color: currentColor;
+    border-radius: 50%;
+    box-shadow: 0 0 2px 1px currentColor;
 }
 
 .header-title{
@@ -101,7 +173,7 @@ figure{
 }
 
 .content-section{
-    padding: 0 5vi;
+    padding: 0 3vi;
 }
 
 .content-title{
