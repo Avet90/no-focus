@@ -18,6 +18,8 @@
     color: var(--text-color);
     font-family: var(--main-font);
     background-color: var(--bg-color);
+    display: grid;
+    gap: 10vi;
 }
 
 p,
@@ -45,6 +47,7 @@ figure{
     display: grid;
     position: relative;
     padding-top: 3vi;
+    padding-bottom: 3vi;
 }
 
 .header::before {
@@ -67,7 +70,7 @@ figure{
     content: '';
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 3vi;
     left: 3vi;
     width: 25px;
     height: 25px;
@@ -75,28 +78,9 @@ figure{
     border-left: 1px solid currentColor;
 }
 
-.header-top-corner{
-    --text-color: #FF0070;
-    color: var(--text-color);
-    position: relative;
-    width: 25px;
-    height: 25px;
-    justify-self:end;   
+.header-rec-block{
+    padding: 0 3vi;
 }
-
-.header-top-corner::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 25px;
-    height: 25px;
-    border-top: 1px solid currentColor;
-    border-right: 1px solid currentColor;
-}
-
 
 .header-rec{
     --text-color: #FF0070;
@@ -104,17 +88,22 @@ figure{
     position: relative;
     padding-right: 36px;
     justify-self:end;
+    font-size: 18px;
 }
 .header-rec::after {
     content: '';
     position: absolute;
-right: 13%;
+    right: 13%;
     top: 40%;
     width: 10px;
     height: 10px;
     background-color: currentColor;
     border-radius: 50%;
     box-shadow: 0 0 2px 1px currentColor;
+}
+
+.header-title-block{
+    padding: 0 3vi 10vi 3vi;
 }
 
 .header-title{
@@ -127,11 +116,16 @@ right: 13%;
 }
 
 .header-menu{
+    padding-right: 3vi;
     justify-self:end;
 }
 
 .header-theme-toggler{
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10vi;
 }
 
 .header-theme-button{
@@ -146,6 +140,7 @@ right: 13%;
     position: relative;
     text-decoration: none;
     transition: all 0.3s ease;
+    font-size: 18px;
 }
 
 .header-theme-button:focus {
@@ -173,11 +168,24 @@ right: 13%;
 }
 
 .content-section{
-    padding: 0 3vi;
+    display: grid;
+    gap: 11vi;
+    padding: 0 3vi 9vi 3vi;
+}
+
+.section-block {
+      display: grid;
+    gap: 5vi;
 }
 
 .content-title{
     font-size: 18px;
+    
+}
+
+.content-block{
+    display: grid;
+    gap: 3vi;
 }
 
 .content-subtitle{
